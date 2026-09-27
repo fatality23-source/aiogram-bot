@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 from handlers.routes import router, notifaer
 load_dotenv()
 TOKEN = getenv("BOT_TOKEN")
-
+print("TOKEN EXISTS:", TOKEN is not None)
+print("TOKEN TYPE:", type(TOKEN))
 dp = Dispatcher()
 
 dp.include_router(router)
